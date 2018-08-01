@@ -8,7 +8,7 @@
     <!-- CSRF Token -->
     <meta name="csrf-token" content="{{ csrf_token() }}">
 
-    <title>{{ config('app.name', 'Events DATABASE ') }}</title>
+    <title>{{ config('app.name', 'LEAD SYSTEM ') }}</title>
 
     <!-- Styles -->
     <link href="{{ asset('css/app.css') }}" rel="stylesheet">
@@ -34,7 +34,7 @@
 
                     <!-- Branding Image -->
                     <a class="navbar-brand" href="{{ url('/home') }}">
-                        {{ config('app.name', 'Events DATABASE ') }}
+                        {{ config('app.name', 'LEAD SYSTEM ') }}
                     </a>
                 </div>
 
@@ -52,11 +52,9 @@
                             <!-- <li><a href="{{ route('register') }}">Register</a></li> -->
                            
                         @else
-                        <li><a href="{{ route('recordform') }}">Add New Record</a></li>
+                       
                         <li><a href="{{ route('importexport') }}">Import/Export</a></li>
-                        <li><a href="{{ route('show') }}">Display All Record </a></li>
-                        <!-- <li><a href="{{ route('customsearch') }}">Custom Search </a></li>
-                        <li><a href="{{ route('search') }}">Search </a></li> -->
+                     
                             <li class="dropdown">
                                 <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false">
                                     {{ Auth::user()->name }} <span class="caret"></span>

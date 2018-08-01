@@ -5,21 +5,37 @@
         <meta http-equiv="X-UA-Compatible" content="IE=edge">
         <meta name="viewport" content="width=device-width, initial-scale=1">
 
-        <title>Events DATABASE</title>
+        <title>LEAD SYSTEM</title>
 
         <!-- Fonts -->
         <link href="https://fonts.googleapis.com/css?family=Raleway:100,600" rel="stylesheet" type="text/css">
 
         <!-- Styles -->
+       
         <style>
             html, body {
-                background-color: #5ae0a9;
+                /* background-color: #5ae0a9; */
+                /* background-image: url("../public/images/bg-image.png"); */
                 /* color: #fff; */
                 font-family: 'Raleway', sans-serif;
                 font-weight: 100;
                 height: 100vh;
                 margin: 0;
+                height: 100%;
+            
             }
+            .bg {
+            /* The image used */
+            background-image: url("../public/images/bg-image.png");
+
+            /* Full height */
+            height: 100%; 
+
+            /* Center and scale the image nicely */
+            background-position: center;
+            background-repeat: no-repeat;
+            background-size: cover;
+        }
 
             .full-height {
                 height: 100vh;
@@ -65,6 +81,7 @@
         </style>
     </head>
     <body>
+    <div class="bg">
     <div class="container">
         <div class="flex-center position-ref full-height">
             @if (Route::has('login'))
@@ -72,19 +89,19 @@
                     @if (Auth::check())
                         <a href="{{ url('/home') }}" class="">Home</a>
                     @else
-                        <a href="{{ url('/login') }}">Login</a>
+                        <a style="color:white;" href="{{ url('/login') }}">Login</a>
                         <!-- <a href="{{ url('/register') }}">Register</a> -->
                     @endif
                 </div>
             @endif
 
             <div class="content">
-                <div class="title m-b-md">
-                   WELLCOME TO THE EXCEL MANIPULATION
+                <div class="title m-b-md" style="color:white; margin-bottom:250px;">
+                <b> Welcome to Montrivo Lead System </b>
                 </div>
-
                
             </div>
+        </div>
         </div>
         </div>
     </body>
